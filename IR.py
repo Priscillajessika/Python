@@ -16,7 +16,7 @@ elif(salario >= 3751.06 and salario <=4664.68):
     salarioliq = salario - valorir
     print("Salario menos 22.5% de IR R$" ,salarioliq)   
 
-elif(salario >= 4664.68):
+elif(salario > 4664.68):
     valorir = salario * 0.275
     salarioliq = salario - valorir
     print("Salario menos 27.5% de IR R$" ,salarioliq) 
