@@ -63,3 +63,23 @@ def contarletras_inicial(lista_palavras):
 contagem_letrasiniciais = contarletras_inicial(lista_palavras) 
 print("A quantidade acumulada de cada letra é:") 
 print (contagem_letrasiniciais)
+
+# Função
+def contarletras_domeunome(lista_palavras, iniciaisnome):
+  with open ('Meu nome.txt','a') as meu_nome:
+        for palavra in lista_palavras:
+            if palavra[:3] == iniciaisnome:
+                meu_nome.write(palavra)
+
+contarletras_domeunome(lista_palavras, iniciaisnome="PRI") 
+
+# Função
+def contarletras_meunome_completo(lista_palavras):
+    meu_nome = ['P','R','I','S','C','I','L','A']
+    with open ('Meu nome completo.txt','a') as meu_nome_completo:
+        for letra in meu_nome:
+            for palavra in lista_palavras:
+                if palavra[0] == letra:
+                    meu_nome_completo.write(palavra)
+
+contarletras_meunome_completo(lista_palavras)
