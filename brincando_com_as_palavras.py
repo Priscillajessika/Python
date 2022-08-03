@@ -83,3 +83,12 @@ def contarletras_meunome_completo(lista_palavras):
                     meu_nome_completo.write(palavra)
 
 contarletras_meunome_completo(lista_palavras)
+
+# Função
+def palavras_palindromo(lista_palavras):
+    with open ("palavra_palindromo.txt", "w", encoding="utf-8") as arquivo_escrita:
+        for palavra in lista_palavras:
+            if palavra.strip() == palavra.strip()[::-1]:
+                arquivo_escrita.write(palavra)
+
+palavras_palindromo(lista_palavras)

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.2 on win32)" generated="20220802 21:06:49.288" rpa="false" schemaversion="3">
+<suite id="s1" name="Char Marvel" source="C:\Users\priscila.rosa\Desktop\Python\char_marvel.robot">
+<test id="s1-t1" name="Testar API Catalago Kabum" line="6">
+<kw name="Configurar Sessao">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>requisicao_catalago</arg>
+<arg>https://servicespub.prod.api.aws.grupokabum.com.br</arg>
+<arg>headers=${HEADERS}</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220802 21:06:49.417" level="INFO">Creating Session using : alias=requisicao_catalago, url=https://servicespub.prod.api.aws.grupokabum.com.br, headers={'Referer': 'kabum.com.br', 'Content-Type': 'application/json', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" starttime="20220802 21:06:49.416" endtime="20220802 21:06:49.418"/>
+</kw>
+<status status="PASS" starttime="20220802 21:06:49.416" endtime="20220802 21:06:49.418"/>
+</kw>
+<kw name="Realizar requisicao no catalago">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${resposta_catalog}</var>
+<arg>requisicao_catalago</arg>
+<arg>/catalog/v2/releases</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220802 21:06:49.889" level="INFO">GET Request : url=https://servicespub.prod.api.aws.grupokabum.com.br/catalog/v2/releases 
+ path_url=/catalog/v2/releases 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Referer': 'kabum.com.br', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg timestamp="20220802 21:06:49.908" level="INFO">GET Response : url=https://servicespub.prod.api.aws.grupokabum.com.br/catalog/v2/releases 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/vnd.api+json', 'Content-Length': '79979', 'Connection': 'keep-alive', 'Date': 'Wed, 03 Aug 2022 00:06:49 GMT', 'Server': 'nginx', 'FRONT-X-Request_ID': '788a291b148f43f637e094e2fd35aee2', 'Strict-Transport-Security': 'max-age=15552000', 'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, mfa-code, mfa_code, client_id, client-id, session, x-dd-b, x-datadome-clientid, basket_id, delivery_uuid, service_provider, zip_code', 'Access-Control-Expose-Headers': 'x-dd-b', 'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS, DELETE', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 3656470ac99541402e170ceba694d22a.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'GIG51-P1', 'X-Amz-Cf-Id': 'h43nuSGfPdAHe3iSAUvPtBXmI_5qbdd2KgBt_Sx25BYL_IOJB3RO8Q=='} 
+ body={"meta":{"total_items_count":154,"total_pages_count":16,"page":{"cursor":"","number":1,"size":10,"is_current_page":true},"breadcrumb":[],"seo":{},"filters":{"bool_filters":[{"name":"has_flash","values":[false],"text":"Flash"},{"name":"has_offer","values":[true,false],"text":"Oferta"},{"name":"has_open_box","values":[false],"text":"Openbox"},{"name":"has_prime","values":[false,true],"text":"Prime"},{"name":"kabum_product","values":[true],"text":"KaBuM!"}],"string_filters":[{"name":"category","values":["Periféricos","Geek","Hardware","TV","Computadores","Celular &amp; Smartphone","Games","Cuidados Pessoais"],"text":"Categorias"},{"name":"manufacturer","values":["Lego","XP-Pen","Galápagos Jogos","Redragon","Dell","LG","Amd","Panini","Samsung","Hyperx","Intel","Acer","Britânia","Huawei","Sony","Asus","Duex","Koch Media","NTC","On Press","Onikuma","TCL","Warrior","Zowie"],"text":"Marcas"}],"number_filters":[{"name":"price","min":12.0,"max":115788.42,"text":"Preço"}]}},"links":{"redirect":null,"first":"/catalog/v2/releases/?page_cursor=Tk9UIElTIFVTRQ==&amp;page_number=1&amp;page_size=10","self":"/catalog/v2/releases/?page_cursor=&amp;page_number=1&amp;page_size=10","last":"/catalog/v2/releases/?page_cursor=Tk9UIElTIFVTRQ==&amp;page_number=16&amp;page_size=10","next":"/catalog/v2/releases/?page_cursor=Tk9UIElTIFVTRQ==&amp;page_number=2&amp;page_size=10"},"data":[{"type":"product","id":366115,"links":{"self":"/catalog/v2/products/366115"},"relationships":{},"attributes":{"menu":"Periféricos/Mesa Digitalizadora/Mesa","title":"Mesa Digitalizadora XP-Pen Deco Fun L Pen Tablet CT1060, com Caneta P01, 5080LPI, USB-C, Verde - DECO FUN L_G","description":"&lt;p&gt;- Mesa digitalizadora para estudo, trabalho, jogo e desenho&lt;/p&gt;\n&lt;p&gt;- Vasta compatibilidade com dispositivos e sistemas operacionais diferentes.&lt;/p&gt;\n&lt;p&gt;- Suporta at&amp;eacute; 60&amp;deg; de inclina&amp;ccedil;&amp;atilde;o e 8192 n&amp;iacute;veis de press&amp;atilde;o para tra&amp;ccedil;os mais precisos e detalhados.&lt;/p&gt;","weight":845.0,"price":568.32,"old_price":0.0,"discount_percentage":5,"price_with_discount":539.9,"offer":null,"prime":{"price":551.27,"price_with_discount":523.71,"discount_percentage":3,"save":16.0,"is_logged_user_exclusive":true},"origin":null,"is_prime":true,"is_openbox":false,"has_free_shipping":false,"has_free_shipping_for_prime_user":false,"has_pix_shipping":false,"is_pre_order":false,"date_pre_order":null,"available":true,"species":0,"stock":5,"limit_buy":0,"type":0,"external_url":"","warranty":"1 ano de garantia (9 meses de garantia contratual junto ao fabricante + 3 meses referentes à garantia legal, nos termos do artigo 26, II, do Código de Defesa do Consumidor)","score_of_ratings":0,"number_of_ratings":0,"is_marketplace":false,"marketplace":{},"manufacturer":{"id":2453,"name":"XP-Pen","img":"https://images4.kabum.com.br/produtos/fabricantes/logo-xp-pen.jpg"},"photos":{"p":["https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032032_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032040_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032036_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032038_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032039_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032037_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032033_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032034_p.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032035_p.jpg"],"m":["https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032032_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032040_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032036_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032038_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032039_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032037_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032033_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032034_m.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032035_m.jpg"],"g":["https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032032_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032040_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032036_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032038_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032039_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032037_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032033_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032034_g.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032035_g.jpg"],"gg":["https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032032_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032040_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032036_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032038_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032039_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032037_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032033_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032034_gg.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032035_gg.jpg"]},"images":["https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032032_original.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032040_original.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032036_original.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032038_original.jpg","https://images.kabum.com.br/produtos/fotos/366115/mesa-digitalizadora-xp-pen-deco-fun-l-pen-tablet-ct1060-com-caneta-p01-5080lpi-usb-c-verde-deco-fun-l_g_1659032039_original.jp... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220802 21:06:49.908" level="INFO">${resposta_catalog} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220802 21:06:49.418" endtime="20220802 21:06:49.909"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${resposta_catalog}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220802 21:06:49.909" endtime="20220802 21:06:49.909"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${resposta_catalog}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220802 21:06:49.910" level="INFO">${resposta_catalog} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220802 21:06:49.909" endtime="20220802 21:06:49.910"/>
+</kw>
+<status status="PASS" starttime="20220802 21:06:49.418" endtime="20220802 21:06:49.910"/>
+</kw>
+<kw name="Validar os campos obrigatorios">
+<kw name="Request Should Be Sucessful">
+<arg>${resposta_catalog}</arg>
+<msg timestamp="20220802 21:06:49.913" level="FAIL">No keyword with name 'Request Should Be Sucessful' found. Did you mean:
+    RequestsLibrary.Request Should Be Successful</msg>
+<status status="FAIL" starttime="20220802 21:06:49.913" endtime="20220802 21:06:49.913"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${resposta_catalog.json()}[data]</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" starttime="20220802 21:06:49.913" endtime="20220802 21:06:49.913"/>
+</kw>
+<status status="FAIL" starttime="20220802 21:06:49.910" endtime="20220802 21:06:49.914"/>
+</kw>
+<status status="FAIL" starttime="20220802 21:06:49.415" endtime="20220802 21:06:49.914">No keyword with name 'Request Should Be Sucessful' found. Did you mean:
+    RequestsLibrary.Request Should Be Successful</status>
+</test>
+<status status="FAIL" starttime="20220802 21:06:49.290" endtime="20220802 21:06:49.915"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Char Marvel">Char Marvel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
