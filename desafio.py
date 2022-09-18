@@ -4,7 +4,7 @@ from base64 import b64encode, b64decode
 import socket
 
 UDP_IP = "127.0.0.1"
-UDP_PORT = 7777
+UDP_PORT = 5007
 
 data = bytes("Boa noite pessoal", 'utf-8')
 key = b64decode('ABEiM0RVZneImQARIjNEVQ==')
