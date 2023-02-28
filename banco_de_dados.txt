@@ -1,0 +1,3 @@
+import sqlite1 as lite
+
+conexao = lite.conectar()
